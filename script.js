@@ -42,6 +42,12 @@ document.getElementById('floorANumber').onclick = function () {
 
     document.getElementById('output').innerHTML = totalPrice;
 }
+
+// ------------------------generateARandomNumber------------------------------
+document.getElementById('generateARandomNumber').onclick = function () {
+    var value = Math.random()
+    document.getElementById('output').innerHTML = value
+}
 // ------------------------value erase ------------------------------------------------------------------
 document.getElementById('erase').onclick = function () {
     document.getElementById('data').value = "";
