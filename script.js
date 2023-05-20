@@ -1,13 +1,13 @@
 // --------------------------Round A Number---------------------------------
 document.getElementById('roundANumber').onclick = function () {
     alert("Value gives with points")
-    var num1 = +prompt("enter a first value");
-    var num2 = +prompt("enter a second value");
-    var num3 = +prompt("enter a third value");
+    // var num1 = +prompt("enter a first value");
+    // var num2 = +prompt("enter a second value");
+    // var num3 = +prompt("enter a third value");
 
-    alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
+    // alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
 
-    var totalPrice = num1 + num2 + num3 ;
+    var totalPrice = document.getElementById('data').value
     totalPrice = Math.round(totalPrice)
 
     document.getElementById('output').innerHTML = totalPrice;
@@ -16,13 +16,13 @@ document.getElementById('roundANumber').onclick = function () {
 // ------------------------------------ceilANumber================================
 document.getElementById('ceilANumber').onclick = function () {
     alert("Value gives with points")
-    var num1 = +prompt("enter a first value");
-    var num2 = +prompt("enter a second value");
-    var num3 = +prompt("enter a third value");
+    // var num1 = +prompt("enter a first value");
+    // var num2 = +prompt("enter a second value");
+    // var num3 = +prompt("enter a third value");
 
-    alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
+    // alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
 
-    var totalPrice = num1 + num2 + num3 ;
+    var totalPrice = document.getElementById('data').value
     totalPrice = Math.ceil(totalPrice)
 
     document.getElementById('output').innerHTML = totalPrice;
@@ -31,14 +31,14 @@ document.getElementById('ceilANumber').onclick = function () {
 // -------------------------Floor A Number--------------------------
 document.getElementById('floorANumber').onclick = function () {
     alert("Value gives with points")
-    var num1 = +prompt("enter a first value");
-    var num2 = +prompt("enter a second value");
-    var num3 = +prompt("enter a third value");
+    // var num1 = +prompt("enter a first value");
+    // var num2 = +prompt("enter a second value");
+    // var num3 = +prompt("enter a third value");
 
-    alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
+    // alert( `first value ${num1} , second value ${num2} , third ${num3} this all value is added`);
 
-    var totalPrice = num1 + num2 + num3 ;
-    totalPrice = Math.ceil(totalPrice)
+    var totalPrice = document.getElementById('data').value
+    totalPrice = Math.floor(totalPrice)
 
     document.getElementById('output').innerHTML = totalPrice;
 }
