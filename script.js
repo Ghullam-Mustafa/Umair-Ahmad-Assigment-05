@@ -78,6 +78,24 @@ document.getElementById('generateARandomNumber').onclick = function () {
 
         document.getElementById('output').innerHTML = html;
     }
+// ----------------------------generateAStrongPassword--------------------------------------------
+document.getElementById('generateAStrongPassword').onclick = function () {
+    let randomString = "";
+    let upperCaseAlphabets =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lowerCaseAlphabets =  "abcdefghijklmnopqrstuvwxyz"
+    let numbers = "0123456789";
+    let symbols = "`~!@#$%^&*-_=+/?.,"
+    let possibleStrig = upperCaseAlphabets + lowerCaseAlphabets + numbers + symbols;
+
+    let limmet = 16;
+    for (let i = 0; i < limmet; i++) {
+        let randomNumber = Math.random();
+
+        randomString +=  possibleStrig.charAt(Math.floor(randomNumber * possibleStrig.length))
+    }
+    document.getElementById('output').innerHTML = randomString;
+}
+
 // ------------------------value erase ------------------------------------------------------------------
 document.getElementById('erase').onclick = function () {
     document.getElementById('data').value = "";
