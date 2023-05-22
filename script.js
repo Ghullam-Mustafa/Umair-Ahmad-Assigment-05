@@ -97,6 +97,18 @@ document.getElementById('generateARandomNumber').onclick = function () {
 // }
 
 document.getElementById('generateAStrongPassword').onclick = function () {
+    let lenght = document.getElementById('data').value
+    if (!lenght) {
+        Toastify({
+            text: "Enter password length",
+            className: "info",
+            newWindow: true,
+            close: true,
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            }
+          }).showToast();
+    }
     let randomString = "";
     let upperCaseAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let lowerCaseAlphabets =  "abcdefghijklmnopqrstuvwxyz";
@@ -104,7 +116,7 @@ document.getElementById('generateAStrongPassword').onclick = function () {
     let symbols = "`~!@#$%^&*-_=+/?.,";
     let possibleStrig = upperCaseAlphabets + lowerCaseAlphabets + numbers + symbols ;
 
-    let limmet = 16 ;
+    let limmet = lenght ;
 
     for (let i = 0; i < limmet; i++) {
         
@@ -117,6 +129,17 @@ document.getElementById('generateAStrongPassword').onclick = function () {
     document.getElementById('output').innerHTML = randomString
 
 }
+// -------------------------
+// --------------------------value------------------------------------------------
+
+    function getValue() {
+        return sometext = document.getElementById('data').value;
+         
+    }
+    setTimeout(() => {
+        console.log(getValue())
+    }, 2000);
+    
 
 // ------------------------value erase ------------------------------------------------------------------
 document.getElementById('erase').onclick = function () {
