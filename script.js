@@ -138,6 +138,16 @@ document.getElementById('generateAStrongPassword').onclick = function () {
      
         document.getElementById('output').innerHTML = tofixed + " " + toNumber
     }
+// --------------------------------controllingLength----------------------------------
+    document.getElementById('controllingLength').onclick = function () {
+        let num =  getValue();
+        num = Number(num);
+
+        num = num.toFixed(2);
+        num = Number(num);
+
+        document.getElementById('output').innerHTML = num;
+    }
 // --------------------------value------------------------------------------------
 
     function getValue() {
