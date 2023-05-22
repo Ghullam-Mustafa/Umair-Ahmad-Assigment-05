@@ -133,7 +133,10 @@ document.getElementById('generateAStrongPassword').onclick = function () {
     document.getElementById('convertingStrings').onclick = function () {
         let value = getValue();
         let toNumber = Number(value);
-        document.getElementById('output').innerHTML = toNumber
+         
+        let tofixed = Number(value).toFixed(2)
+     
+        document.getElementById('output').innerHTML = tofixed + " " + toNumber
     }
 // --------------------------value------------------------------------------------
 
