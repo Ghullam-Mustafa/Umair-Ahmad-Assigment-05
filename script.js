@@ -129,7 +129,12 @@ document.getElementById('generateAStrongPassword').onclick = function () {
     document.getElementById('output').innerHTML = randomString
 
 }
-// -------------------------
+// -------------------------convertingStrings------------------------------------
+    document.getElementById('convertingStrings').onclick = function () {
+        let value = getValue();
+        let toNumber = Number(value);
+        document.getElementById('output').innerHTML = toNumber
+    }
 // --------------------------value------------------------------------------------
 
     function getValue() {
