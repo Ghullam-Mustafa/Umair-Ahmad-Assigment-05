@@ -185,10 +185,26 @@ document.getElementById('Clean').onclick = function () {
    let outputBoxHtml =  document.getElementById('output').innerHTML ;
 
    if (!outputBoxHtml.length) {
-    toastifyError("It's already empty")
+    Toastify({
+        text: "It's already empty",
+        className: "info",
+        newWindow: true,
+        close: true,
+        style: {
+          background: "linear-gradient(to right, #00000, #96c93d)",
+        }
+      }).showToast();
    }else{
     clearOutput();
-    toastifySucces("Output / Result box has been cleard");
+    Toastify({
+        text: "output result has been cleard",
+        className: "info",
+        newWindow: true,
+        close: true,
+        style: {
+          background: "linear-gradient(to right, #0009b, #96c93d)",
+        }
+      }).showToast();
    }
 }
 
