@@ -148,6 +148,23 @@ document.getElementById('generateAStrongPassword').onclick = function () {
 
         document.getElementById('output').innerHTML = num;
     }
+
+// --------------------------------calculateGST---------------------------
+document.getElementById('calculateGST').onclick = function () {
+    let  cost = getValue();
+    cost = Number(cost);
+    let taxInput = +prompt("Enter your text")
+    
+    let tax = cost * (taxInput / 100);
+     
+    let totalCost = cost + tax;
+
+    totalCost = Math.round(totalCost)
+
+    document.getElementById('output').innerHTML = 'Your bill  =  <span class = "text-primaryTheme fw-bold"> '+cost+'</span>'; 
+    document.getElementById('output').innerHTML += '<br> Tax ' + taxInput + '% =  <span class = "text-danger fw-bold"> '+tax.toFixed(2) +'</span>';
+    document.getElementById('output').innerHTML += '<br>Total amount including tax = <span class = "text-success fw-bold">'+totalCost + '</span>' 
+}
 // --------------------------value------------------------------------------------
 
     function getValue() {
@@ -165,6 +182,18 @@ document.getElementById('erase').onclick = function () {
 }
 // -------------------------output erase ---------------------------------------------------------------
 document.getElementById('Clean').onclick = function () {
+   let outputBoxHtml =  document.getElementById('output').innerHTML ;
+
+   if (!outputBoxHtml.length) {
+    toastifyError("It's already empty")
+   }else{
+    clearOutput();
+    toastifySucces("Output / Result box has been cleard");
+   }
+}
+
+// -----------------------------clear-----------------------------
+function clearOutput() {
     document.getElementById('output').innerHTML = "";
 }
 
